@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Palak Soni — BCA Student | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Custom cute cursor -->
+<div class="cursor-blob" id="cursorBlob"></div>
+
+<!-- Background layers -->
+<div class="cloud-field" id="cloudField"></div>
+<div class="doodle-field" id="doodleField"></div>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-mark">✿ PS ✿</div>
+    <div class="loader-bar"><span id="loaderProgress"></span></div>
+    <div class="loader-text">loading pretty things<span class="dots"><span>.</span><span>.</span><span>.</span></span></div>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">PS<span class="nav-logo-heart">♡</span></a>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#education">education</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">say hi</a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">about</a>
+  <a href="#skills">skills</a>
+  <a href="#education">education</a>
+  <a href="#projects">projects</a>
+  <a href="#contact">contact</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="hero-grid">
+
+    <div class="hero-text">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> BCA · 3rd Semester · New Delhi</div>
+      <h1 class="hero-title">
+        <span class="hero-title-line">Hi, I'm</span>
+        <span class="hero-title-line hero-title-accent">Palak Soni <span class="wave">👋</span></span>
+      </h1>
+      <p class="hero-sub">A BCA student who likes turning small ideas into things that actually work — from an AI legal-awareness assistant to a flower AR filter. Say hi to <strong>Blossom</strong>, she's floating right over there and she's watching your cursor.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary"><span>See my projects</span></a>
+        <a href="#contact" class="btn btn-ghost"><span>Let's connect</span></a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-count="2">0</span><span class="stat-label">projects built</span></div>
+        <div class="stat"><span class="stat-num" data-count="7">0</span><span class="stat-label">languages &amp; tools</span></div>
+        <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">current semester</span></div>
+      </div>
+    </div>
+
+    <div class="hero-3d">
+      <div class="hero-3d-blob hero-3d-blob-1"></div>
+      <div class="hero-3d-blob hero-3d-blob-2"></div>
+      <canvas id="character-canvas"></canvas>
+      <div class="hero-3d-tag">
+        <span class="tag-dot"></span> Blossom — floating along
+      </div>
+    </div>
+
+  </div>
+  <div class="scroll-hint">
+    <span>scroll for more</span>
+    <div class="scroll-arrow">↓</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-eyebrow">◡ about me ◡</span>
+        <h2 class="section-title">A little about me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p class="about-lead">I'm a second-year <strong>BCA</strong> student at Maharaja Surajmal Institute, New Delhi — currently in my 3rd semester, graduating in 2028.</p>
+          <p>I enjoy building small projects that mix web development with a bit of AI — things like an assistant that explains legal rights simply, or a filter that puts flowers on your face in real time. I like my code clean and my interfaces cute.</p>
+          <p>Outside of coursework, I'm usually picking up something new — right now that's computer vision and getting more comfortable with backend basics.</p>
+          <div class="about-tags">
+            <span>New Delhi, India</span>
+            <span>BCA · Sem 3</span>
+            <span>Grad. 2028</span>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-row"><span>Focus</span><strong>Web Development, Data Analytics, Cloud Computing, AI</strong></div>
+          <div class="about-card-row"><span>Currently studying</span><strong>Computer Network, Computer Org & Architecture, Full Stack Development, Python Programming</strong></div>
+          <div class="about-card-row"><span>College</span><strong>Maharaja Surajmal Institute</strong></div>
+          <div class="about-card-row"><span>School</span><strong>Ganga International School</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-eyebrow">◡ skills ◡</span>
+        <h2 class="section-title">What I work with</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-block">
+          <h3>Languages</h3>
+          <ul class="skill-bars">
+            <li><span class="skill-name">Python</span><div class="bar"><i style="--w:50%"></i></div></li>
+            <li><span class="skill-name">C</span><div class="bar"><i style="--w:85%"></i></div></li>
+            <li><span class="skill-name">JavaScript</span><div class="bar"><i style="--w:75%"></i></div></li>
+            <li><span class="skill-name">PHP</span><div class="bar"><i style="--w:65%"></i></div></li>
+            <li><span class="skill-name">HTML / CSS</span><div class="bar"><i style="--w:98%"></i></div></li>
+          </ul>
+        </div>
+
+        <div class="skill-block">
+          <h3>Frameworks &amp; Tools</h3>
+          <ul class="skill-bars">
+            <li><span class="skill-name">Bootstrap</span><div class="bar"><i style="--w:48%"></i></div></li>
+            <li><span class="skill-name">MySQL</span><div class="bar"><i style="--w:92%"></i></div></li>
+            <li><span class="skill-name">OpenCV</span><div class="bar"><i style="--w:50%"></i></div></li>
+            <li><span class="skill-name">MediaPipe</span><div class="bar"><i style="--w:50%"></i></div></li>
+            <li><span class="skill-name">Canva</span><div class="bar"><i style="--w:99%"></i></div></li>
+          </ul>
+        </div>
+
+        <div class="skill-block skill-block-chips">
+          <h3>Coursework right now</h3>
+          <div class="chip-cloud">
+            <span>DBMS</span><span>OOPs</span><span>Web Based Programming</span>
+            <span>Web Technology</span><span>Fundamentals of IT</span><span>Computers in Education</span>
+          </div>
+          <h3 class="chip-heading-spacer">Find me here</h3>
+          <div class="chip-cloud">
+            <span>GitHub</span><span>LinkedIn</span><span>LeetCode</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-eyebrow">◡ education ◡</span>
+        <h2 class="section-title">My academic path</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-period">2025 — 2028 (ongoing)</div>
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p>Maharaja Surajmal Institute, New Delhi. Currently in my <strong>3rd semester</strong></p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-period">2012 — 2024</div>
+            <h3>Schooling — Ganga International School</h3>
+            <p>CBSE board, Science stream (PCM) with Computer Science — the years that got me into programming in the first place.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section-alt" id="projects">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-eyebrow">◡ projects ◡</span>
+        <h2 class="section-title">Things I've built</h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-emoji">⚖️</span>
+          </div>
+          <h3>AI Legal Awareness Assistant</h3>
+          <p>An AI-based assistant that helps people understand their basic legal rights and laws in simple, everyday language — built to make legal awareness a little less intimidating.</p>
+          <div class="project-stack"><span>Python</span><span>AI Integration</span><span>Web</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-emoji">🌸</span>
+          </div>
+          <h3>Flower AR Effect — AI Assistant</h3>
+          <p>A real-time AR filter that overlays flower effects on your face using live face tracking, built with computer vision and integrated into a simple web front end.</p>
+          <div class="project-stack"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>HTML</span></div>
+        </article>
+
+        <article class="project-card project-card-soon">
+          <div class="project-card-top">
+            <span class="project-emoji">🌱</span>
+          </div>
+          <h3>More on the way</h3>
+          <p>I'm always tinkering with something new — this spot is reserved for whatever I build next.</p>
+          <div class="project-stack"><span>coming soon</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <div class="section-inner">
+      <div class="contact-box">
+        <span class="section-eyebrow">◡ contact ◡</span>
+        <h2 class="contact-title">Let's build something<br/>cute together <span class="contact-heart">♡</span></h2>
+        <p class="contact-sub">Open to internships, collaborations, and anyone who wants to talk code or design.</p>
+        <div class="contact-row">
+          <a href="mailto:Sonipalak0604@gmail.com" class="contact-link">
+            <span class="contact-link-label">email</span>
+            <span class="contact-link-value">Sonipalak0604@gmail.com</span>
+          </a>
+          <a href="https://github.com/OopsPalak" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">github</span>
+            <span class="contact-link-value">github.com/OopsPalak</span>
+          </a>
+          <a href="https://www.linkedin.com/in/palak-soni-716556369" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">linkedin</span>
+            <span class="contact-link-value">palak-soni-716556369</span>
+          </a>
+          <a href="https://leetcode.com/u/Palaksoni_/" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">leetcode</span>
+            <span class="contact-link-value">Palaksoni_</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>© 2026 Palak Soni. Made with ♡ and way too much pastel.</span>
+    <a href="#home" class="footer-top">back to top ↑</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
