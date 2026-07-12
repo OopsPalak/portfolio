@@ -291,11 +291,13 @@ ul{ list-style:none; }
 .work-item:last-child{ border-bottom:none; }
 .work-item:hover{ padding-left:16px; border-left-color:var(--mint); }
 .work-item:nth-child(2):hover{ border-left-color:var(--coral); }
+.work-item:nth-child(3):hover{ border-left-color:var(--accent); }
 .work-item-head{ margin-bottom:8px; }
 .work-item h3{
   font-family:var(--font-display); font-weight:500; font-size:1.3rem;
 }
 .work-item p{ color:var(--ink-dim); font-size:.96rem; line-height:1.6; max-width:520px; }
+ 
 
 /* CONTACT */
 .contact-list{ display:flex; flex-direction:column; gap:2px; }
